@@ -35,4 +35,4 @@
 
 ## 프로젝트 결과
 
-<iframe width="956" height="538" src="https://www.youtube.com/embed/ozv4q2ov3Mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![mv](https://i9.ytimg.com/vi/AfWimVqh24s/mq2.jpg?sqp=CKjwxZUG&rs=AOn4CLCa8-ItN7OYB2N6ajW-ZwklXZWFKg.jpg)](https://www.youtube.com/watch?v=AfWimVqh24s)
