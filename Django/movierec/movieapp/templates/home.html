@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>새싹 4조 영화 추천 홈페이지 </title>
+
+  <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel='stylesheet' type='text/css'>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css">
+<script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+<script src='//unpkg.com/popper.js@1/dist/umd/popper.min.js'></script>
+<script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+
+<!-- %^&$#$%^&*%$#$%^&*%$#$%^&^% -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+<script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <!-- Custom fonts for this template -->
+ 
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'home.css' %}" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% comment %} <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+  </nav> {% endcomment %}
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="masthead"></div>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto ">
+          <h1 class="mb-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwbMjtyoDhY38KbFr1V9swZIl9XNPCsfcgg&usqp=CAU" width="50" height="50" alt="logo"/> 영화를 검색하세요! <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwbMjtyoDhY38KbFr1V9swZIl9XNPCsfcgg&usqp=CAU"width="50" height="50" alt="logo"/></h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form action="{% url 'recommend' %}" method='POST'>
+            {% csrf_token %}
+            <div class="form-row">
+                    <input type="text" class="form-control form-control-lg" placeholder="general word2vec + TfIdf " name='data'>
+                <button type="submit" class="btn btn-dark">find a movie</button>
+            </div>
+        </form>
+          <form action="{% url 'nmf_recommend' %}" method='POST'>
+            {% csrf_token %}
+            <div class="form-row">
+                    <input type="text" class="form-control form-control-lg" placeholder="word2vec + TfIdf + nmf" name='data2'>
+                <button type="submit" class="btn btn-dark">find a movie</button>
+            </div>
+        </form>
+          <form action="{% url 'lda_recommend' %}" method='POST'>
+            {% csrf_token %}
+            <div class="form-row">
+                    <input type="text" class="form-control form-control-lg" placeholder="word2vec + TfIdf  + lda" name='data3'>
+                <button type="submit" class="btn btn-dark">find a movie</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters ssac1">
+        
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2 class='name1'>김도균</h2>
+          <p class="lead mb-1"><br> 크롤링, nlp 모델링, 웹서비스 구현 전부 노가다라 힘들었다. <br> 서비스 구현이 잘 되서 다행이였고 팀원들이 열심히 해줘서 고마웠다. </p>
+        </div>
+      </div>
+      <div class="row no-gutters ssac2">
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2 class='name2'>박강인</h2>
+          <p class="lead mb-1"><br> 이번 프로젝트에서 크롤링 부터 서비스 구현까지 처음으로 진행했다. <br> 생각보다 어려웠고, 삽질도 많이 했지만, 묵묵히 팀을 이끌어준 도균 팀장님과 매일 자진 야근을 자처하는 팀원들의 열정 덕분에 많은 걸 배울 수 있었던 시간이었습니다.</p>
+        </div>
+      </div>
+      <div class="row no-gutters ssac1">
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2 class='name1'>박선홍</h2>
+          <p class="lead mb-1"><br> 프로젝트를 진행하면서 비록 힘들었지만 밤 늦게 까지 고생한 팀원분들 덕분에 재미와 지식 모두 얻을 수 있는 좋은 기회였습니다. <br> 고생한 팀원 분들 덕분에 프로젝트를 잘 마무리 할 수 있었기에 팀원 분들께 이 공을 모두 돌립니다.</p>
+        </div>
+      </div>
+      <div class="row no-gutters ssac2">
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2 class='name2'>반위홍</h2>
+          <p class="lead mb-1"><br>이번 프로젝트를 통해서 조원분들에게 많은 도움을 받아 무사히 프로젝트를 마칠수 있었습니다. <br> 비록 많은 기여를 못하였지만 이번 참여를 계기로 향후를 위해 성장하며 나아가겠습니다. </p>
+        </div>
+      </div>  
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  
+
+  <!-- Call to Action -->
+  
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
+
+</html>

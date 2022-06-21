@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type='text/css' href="{% static 'recommend.css' %}" />
+    <title>movie search result page</title>
+    <style>
+        .jb-700 {
+        font-weight: 700;
+      }
+      h2 { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="for_center">
+        <div class="page_top">
+            <h2 style="background-color:gray;"><img src="https://e7.pngegg.com/pngimages/648/178/png-clipart-logo-food-popcorn-others-miscellaneous-baking-thumbnail.png" width="70" height="70" alt="tq"/>  NMF Search Result   <img src="https://e7.pngegg.com/pngimages/648/178/png-clipart-logo-food-popcorn-others-miscellaneous-baking-thumbnail.png" width="70" height="70" alt="tq"/></h2>
+        </div>
+        <div class="for_center">
+            <div class="card_container">
+                <a href="/1/{{ client.place }}">{{ client.place }}</a>
+                {% for movie in data2.itertuples %}
+                <div class="container">
+                    <div class="card-deck">
+                      <div class="card" *ngFor="let item of cards">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <a target="_blank" href = {{ link }}{{ movie.movie_id }}>
+                                <img src="{{ movie.image_link }}" class="card-img-top embed-responsive-item" alt="tree">
+                            <a>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title"> 제목 : {{ movie.title }} </h4> <!-- 등급 : {{ movie.movie_rating }}-->
+                          <p class="card-text mt-3"> 장르 : {{ movie.genre }} 평점 : {{ movie.star }} </p>
+                          <p class="card-text mt-3"> 배우 : {{ movie.actors }} 감독 : {{ movie.director }} 등급 : {{ movie.movie_rating }}</p>
+                          <p class="card-text mt-3"> 줄거리 : {{ movie.wnfrjfl }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+            </div>
+            <button type="button"><a href='{% url 'home' %}'> exit </button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+        {% comment %} <ui>
+        <a href="/1/{{ client.place }}">{{ client.place }}</a>
+        {% for movie in data2.itertuples %}
+            <li><a href={{ link }}{{ movie.movie_id }}>{{ movie.title }} </a>{{movie.star}} {{movie.movie_rating}} </li><br/>
+        {% endfor %}
+        </ui>
+        <br/> 
+        <a href='{% url 'home' %}'>exit</a> {% endcomment %}
+
