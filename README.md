@@ -35,4 +35,4 @@
 
 ## 프로젝트 결과
 
-[![mv](https://i9.ytimg.com/vi/AfWimVqh24s/mq2.jpg?sqp=CKjwxZUG&rs=AOn4CLCa8-ItN7OYB2N6ajW-ZwklXZWFKg.jpg)](https://www.youtube.com/watch?v=AfWimVqh24s)
+[![mv](https://img.youtube.com/vi/AfWimVqh24s/0.jpg)](https://www.youtube.com/watch?v=AfWimVqh24s)
