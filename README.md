@@ -36,3 +36,9 @@
 ## 프로젝트 결과
 
 [![mv](https://img.youtube.com/vi/AfWimVqh24s/hqdefault.jpg)](https://www.youtube.com/watch?v=AfWimVqh24s)
+
+
+### 개선 사항
+- 검색시 속도 문제 해결 필요
+- 웹 서버 배포를 통해 홈페이지 구현
+- 키워드 기반 추천 방식 외에 다른 추천 시스템 방식 도입 
