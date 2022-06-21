@@ -33,7 +33,7 @@
 **< part (2) : 웹 페이지 구현 >**  
 - django 활용 키워드 검색 추천 웹 페이지 구현  
 
-## 프로젝트 결과
+## 프로젝트 결과(썸네일 Click!)
 
 [![mv](https://img.youtube.com/vi/AfWimVqh24s/hqdefault.jpg)](https://www.youtube.com/watch?v=AfWimVqh24s)
 
