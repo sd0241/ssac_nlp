@@ -28,10 +28,10 @@
 ### 상세 역할
 __< part (1) : 영화 정보 크롤링 >__   
 - beautifulsoup4 활용 영화 제목, 감독, 개봉정보, 줄거리 등 10개 정보 크롤링(2011~2019)
-- 크롤링 한 데이터 csv 형태로 Django 자체 db에 저장
+- 크롤링 한 데이터 csv 형태로 Django 자체 db에 저장  
 __< part (2) : 웹 페이지 구현 >__
 - django 활용 키워드 검색 추천 웹 페이지 구현  
 
 ## 프로젝트 결과
 
-{% include video id="VYOjWnS4cMY" provider="youtube" %}
+<iframe width="956" height="538" src="https://www.youtube.com/embed/ozv4q2ov3Mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
